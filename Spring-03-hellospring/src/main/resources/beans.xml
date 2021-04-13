@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--Spring来创建对象，在spring这些都称为bean
+以前创建对象 类型 变量名=new 类型（）；
+Hello hello =new Hello();
+在bean中 id=变量名
+class =new的对象的全路径
+property相当于给对象中的属性赋值
+问题1：Hello对象是谁创建的都？
+答：hello对象是由Spring创建的
+问题2：Hello对象的属性是怎样设置的？
+答：hello对象的属性是由Spring容器设置的。
+-->
+
+    <bean id="hello" class="com.lxx.pojo.Hello">
+        <property name="str" value="String">
+
+        </property>
+    </bean>
+
+</beans>

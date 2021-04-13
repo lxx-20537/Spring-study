@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="address" class="com.lxx.pojo.Address">
+        <property name="address" value="上海"></property>
+    </bean>
+    <bean id="student" class="com.lxx.pojo.Student">
+        <!--第一种：普通值得注入：value-->
+        <property name="name" value="张三"></property>
+        <!--第二种：bean注入：ref-->
+        <property name="address" ref="address">
+        </property>
+        <!--第三种：数组注入-->
+        <property name="books">
+
+            <array>
+                <value>西游记</value>
+                <value>红楼梦</value>
+                <value>红楼梦</value>
+                <value>三国演义</value>
+            </array>
+        </property>
+        <!--第四种：List注入-->
+        <property name="hobbys">
+            <list>
+                <value>听音乐</value>
+                <value>敲代码</value>
+                <value>陪老婆</value>
+            </list>
+        </property>
+        <!--第五种：Map注入-->
+        <property name="card">
+            <map>
+                <entry key="姓名" value="孙悟空"></entry>
+                <entry key="身份证" value="1212314434254"></entry>
+            </map>
+        </property>
+        <!--第六种：Set集合注入-->
+        <property name="games">
+            <set>
+
+                <value>111</value>
+                <value>222</value>
+                <value>333</value>
+            </set>
+        </property>
+        <!--第七种：null注入-->
+        <property name="wife">
+            <null/>
+        </property>
+        <!--第八种：proprtys注入-->
+        <property name="info">
+            <props>
+                <prop key="语言">汉语</prop>
+                <prop key="英语等级">六级</prop>
+            </props>
+        </property>
+
+
+    </bean>
+
+</beans>

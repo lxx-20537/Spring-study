@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="user" class="com.lxx.pojo.User">
+       <!-- <property name="name" value="张三">
+
+        </property>-->
+        <!--第一种：为构造函数的参数赋值-->
+      <!--  <constructor-arg index="0" value="李四"></constructor-arg>-->
+        <!--第二种：构造函数参数类型匹配  不推荐使用·  -->
+      <!--  <constructor-arg type="java.lang.String" value="张三说李四"></constructor-arg>-->
+        <!--第三种：直接通过参数名来设置-->
+        <constructor-arg name="name" value="李四说张三"></constructor-arg>
+    </bean>
+    <!--
+    id:bean的唯一标识符，也就相当于我们学的对象名
+    class：bean对象所对应的的类的全路径名
+    name:也是别名，而且可以同时取多个别名
+    -->
+    <bean id="usert" class="com.lxx.pojo.UserT" name="u1 u2 u3 u4">
+        <property name="name" value="啦啦啦"></property>
+    </bean>
+    <!--别名：如果添加了别名，我们也可以使用-->
+    <alias name="user" alias="user2"></alias>
+</beans>
